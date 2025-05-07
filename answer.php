@@ -29,32 +29,30 @@
       <div class="right-image">
         <img src="./images/math-division-symbol.png" alt="Division image" width="500" />
       </div>
-      <br />
-      <div class="page-content-guide">Enter two numbers to multiply:</div>
-      <div class="page-content">
-        <form action="./answer.php" method="GET">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="dividend-number" />
-            <label class="mdl-textfield__label" for="dividend-number">Your dividend number here...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <label>/</label>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="divisor-number" />
-            <label class="mdl-textfield__label" for="divisor-number">Your divisor number here...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
+      <div class="page-content-answer">
+        <div id="answer">
+          <?php
+          $counter = 0;
+
+          // input
+          $dividendNumber = $_GET["dividend-number"];
+          $divisorNumber = $_GET["divisor-number"];
+
+          // process
+          while ($dividendNumber >= $divisorNumber) {
+            $dividendNumber -= $divisorNumber;
+            $counter++;
+          }
+
+          // output
+          echo $dividendNumber . ' / ' . $divisorNumber . ' is: ' . $counter . ' and ' . $dividendNumber . '/' . $divisorNumber;
+          ?>
+        </div>
       </div>
-      <br />
-      <!-- Accent-colored raised button with ripple -->
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        type="submit">
-        Calculate
-      </button>
-      </form>
-  </div>
-  </main>
+      <div class="page-content-return">
+        <a href="./index.php">Return ...</a>
+      </div>
+    </main>
   </div>
 </body>
 
