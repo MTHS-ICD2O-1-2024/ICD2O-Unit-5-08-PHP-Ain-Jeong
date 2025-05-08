@@ -35,17 +35,21 @@
           $counter = 0;
 
           // input
-          $dividendNumber = $_GET["dividend-number"];
-          $divisorNumber = $_GET["divisor-number"];
+          $firstNumber = $_GET["first-number"];
+          $secondNumber = $_GET["second-number"];
 
           // process
-          while ($dividendNumber >= $divisorNumber) {
-            $dividendNumber -= $divisorNumber;
+          while ($firstNumber > $counter) {
+            $firstNumber -= $secondNumber;
             $counter++;
+
+            if ($firstNumber < $secondNumber) {
+              break;
+            }
           }
 
           // output
-          echo $dividendNumber . ' / ' . $divisorNumber . ' is: ' . $counter . ' and ' . $dividendNumber . '/' . $divisorNumber;
+          echo $firstNumber . ' ÷ ' . $secondNumber . ' is: ' . $counter . ' R ' . $firstNumber;
           ?>
         </div>
       </div>

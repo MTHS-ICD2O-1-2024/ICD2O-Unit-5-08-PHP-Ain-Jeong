@@ -34,14 +34,14 @@
       <div class="page-content">
         <form action="./answer.php" method="GET">
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="dividend-number" />
-            <label class="mdl-textfield__label" for="dividend-number">Your dividend number here...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="first-number" />
+            <label class="mdl-textfield__label" for="first-number">Your first number here...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
-          <label>/</label>
+          <label>÷</label>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="divisor-number" />
-            <label class="mdl-textfield__label" for="divisor-number">Your divisor number here...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="second-number" />
+            <label class="mdl-textfield__label" for="second-number">Your second number here...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
           <br />
