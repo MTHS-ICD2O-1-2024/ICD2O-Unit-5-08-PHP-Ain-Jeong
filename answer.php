@@ -38,8 +38,10 @@
           $firstNumber = $_GET["first-number"];
           $secondNumber = $_GET["second-number"];
 
+          $originalFirstNumber = $firstNumber;
+
           // process
-          while ($firstNumber > $counter) {
+          while ($firstNumber >= $counter) {
             $firstNumber -= $secondNumber;
             $counter++;
 
@@ -49,7 +51,7 @@
           }
 
           // output
-          echo $firstNumber . ' ÷ ' . $secondNumber . ' is: ' . $counter . ' R ' . $firstNumber;
+          echo $originalFirstNumber . ' ÷ ' . $secondNumber . ' is: ' . $counter . ' R ' . $firstNumber;
           ?>
         </div>
       </div>
