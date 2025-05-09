@@ -30,7 +30,7 @@
         <img src="./images/math-division-symbol.png" alt="Division image" width="500" />
       </div>
       <br />
-      <div class="page-content-guide">Enter two numbers to multiply:</div>
+      <div class="page-content-guide">Enter two numbers to divide:</div>
       <div class="page-content">
         <form action="./answer.php" method="GET">
           <div class="mdl-textfield mdl-js-textfield">
