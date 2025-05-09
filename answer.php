@@ -41,7 +41,7 @@
           $originalFirstNumber = $firstNumber;
 
           // process
-          while ($firstNumber >= $counter) {
+          while ($firstNumber >= $secondNumber) {
             $firstNumber -= $secondNumber;
             $counter++;
 
